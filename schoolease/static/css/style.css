@@ -1,0 +1,111 @@
+.topnav {
+    float: right;
+    size: 29;
+    font-size: 20px;
+    color:black !important;
+}
+
+button.custom_search {
+    padding-left: 30px;
+    font-size: 20px;
+    margin-left:500px;
+
+}
+
+.cus_tit {
+    margin-left: 450px;
+}
+
+.cus_tit1 {
+    margin-left: 200px;
+}
+
+
+.cus_tex {
+    margin-left: 424px;
+}
+
+.cus_part_4 {
+  background-color: #1B8C88;
+}
+
+.cus_part_5 {
+ height: 250px;
+  background-color: #74E6A6;
+;
+}
+
+.school {
+  height:250px;
+  width: 250px;
+  border: 5px solid #1B8C88;
+  padding: 50px;
+  margin: 20px;
+  color: #1B8C88;
+}
+
+.cus_first {
+    margin-top: 150px;
+}
+
+.cus_second {
+    margin-top: 70px;
+}
+.cus_part_1 {
+  background-color: #1B8C88;
+  margin-top:43px;
+  height: 250px;
+}
+
+.cus_text1{
+
+}
+
+.cus_ao_1 {
+    height: 250px;
+    background-color: #1B8C88;
+    margin-top: 120px;
+    padding:100px;
+
+
+}
+
+
+ul     	     {
+		list-style: none;
+
+	     }
+
+ul li:before {
+		content: "\00BB \0020";
+		color: #1B8C88;
+	     }
+
+.cus_con_1 {
+    height: 250px;
+    background-color: #1B8C88;
+    margin-top: 120px;
+    padding:100px;
+
+}
+
+
+.cus_l_gn {
+    height: 350px;
+    background-color: #1B8C88;
+    margin-top: 120px;
+
+}
+
+
+.cus_tx1 {
+    margin-left:500px;
+}
+
+.cus_signup {
+    height: 3700px;
+    background-color: #1B8C88;
+    margin-top: 120px;
+
+}
+

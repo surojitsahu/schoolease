@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% load static %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+<div class="container">
+    <div class="cus_con_1"><h1 style="color:white;">Contact Us</h1></div><br><br><br>
+
+
+<div class="form-group row">
+            <div class="col-md-6">
+                <div class="col-md-4"><p>Address<br>D-14 Tripti vihar ujjain-456010</p></div>
+                <div class="col-md-4"><p>Phone<br>9713309223</p></div>
+                <div class="col-md-4"><p>Social Media</p>
+                <a href="#"><i class="fa fa-facebook" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-instagram" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-twitter" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-google-plus-square" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+
+                </div>
+                <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+<h1>Google Map API</h1>
+            </div>
+
+            <div class="col-md-6">
+               <p></p>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+
+  padding: 20px;
+}
+</style>
+
+<h3>We had love hear from you</h3>
+                <p>Fiels Marks with * are compulsary </p>
+
+  <form action="">
+    <label for="fname">Name*</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">Subject</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="lname">Email*</label>
+    <input type="text" id="country" name="lastname">
+
+
+    <label for="subject">Message*</label>
+    <textarea id="subject" name="subject" style="height:100px"></textarea>
+
+    <input type="submit" value="PostMessage">
+  </form>
+</div>
+            </div>
+</div>
+
+
+
+{% endblock %}

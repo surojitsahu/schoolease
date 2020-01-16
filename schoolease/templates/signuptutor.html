@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+{% load static %}
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+
+<div class="container">
+    <div class="cus_signup">
+    <h3 style="color:white;">Sign-up as Tutor</h3><br><br>
+  <form method="POST">
+        {% csrf_token %}
+{{form.as_p}}
+
+<p>I agree Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, <br>when an unknown printer took a galley of type and scrambled it to<br> make a type specimen book. It has survived not only five centuries, <br>but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  <p>&nbsp;</p>
+<input type="submit" class="btn btn-primary" value="Register">
+
+  </form>
+
+</div>
+    </div>
+<hr color="#378ba7" style="height: 2px">
+
+{% endblock %}

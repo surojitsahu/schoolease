@@ -1,0 +1,589 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+{% load static %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="{% static '/css/style.css' %}" rel="stylesheet">
+<div class="container">
+<!--    <span>We help you to s style="color:blue;">find the way</> you want to be educated</p>-->
+    <div class="cus_part_1">
+<p class="cus_text1" style="font-size: 30px;">We help you to <span style="color:yellow; ">find the<br> way </span>you want to be educated </p>
+</div>
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+    <p>&nbsp;</p>    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Schools</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Coachings</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tutors</button>
+</div>
+    <form class="form-horizontal" id="nameform" method="POST">
+ {% csrf_token %}
+
+        <div id="London" class="tabcontent">
+  <div class="cus_tit"><h3>Search Schools</h3></div>
+    <input class="form-control" type="text" placeholder="Type in your school name" name="search">
+    <p>&nbsp;</p>
+
+    <div class="form-group row">
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select state</option>
+
+   <option value="volvo">Madhya Pradesh</option>
+  <option value="saab">Tamil Nadu</option>
+  <option value="opel">Maharastra</option>
+  <option value="audi">Utter Pradesh</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select city</option>
+  <option value="volvo">Bhopal</option>
+  <option value="saab">Indore</option>
+  <option value="opel">Chennai</option>
+  <option value="audi">Jabalpur</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select board</option>
+  <option value="volvo">State</option>
+  <option value="saab">CBSE</option>
+  <option value="opel">ICSE</option>
+  <option value="audi">Others</option>
+</select>
+            </div>
+    </div>
+<br>
+    <button class="custom_search" type="submit" form="nameform" value="Submit">search</button>
+
+</div>
+
+<div id="Paris" class="tabcontent">
+
+    <div class="cus_tit"><h3>Search Coachings</h3></div>
+    <input class="form-control" type="text" placeholder="Type in your school name" name="search">
+    <p>&nbsp;</p>
+
+    <div class="form-group row">
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select state</option>
+
+   <option value="volvo">Madhya Pradesh</option>
+  <option value="saab">Tamil Nadu</option>
+  <option value="opel">Maharastra</option>
+  <option value="audi">Utter Pradesh</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select city</option>
+  <option value="volvo">Bhopal</option>
+  <option value="saab">Indore</option>
+  <option value="opel">Chennai</option>
+  <option value="audi">Jabalpur</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select board</option>
+  <option value="volvo">State</option>
+  <option value="saab">CBSE</option>
+  <option value="opel">ICSE</option>
+  <option value="audi">Others</option>
+</select>
+            </div>
+    </div>
+<br>
+    <button class="custom_search" type="submit" form="nameform" value="Submit">search</button>
+
+</div>
+
+<div id="Tokyo" class="tabcontent">
+
+    <div class="cus_tit"> <h3>Search Tutors</h3></div>
+    <input class="form-control" type="text" placeholder="Type in your school name" name="search">
+    <p>&nbsp;</p>
+
+    <div class="form-group row">
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select state</option>
+
+   <option value="volvo">Madhya Pradesh</option>
+  <option value="saab">Tamil Nadu</option>
+  <option value="opel">Maharastra</option>
+  <option value="audi">Utter Pradesh</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select city</option>
+  <option value="volvo">Bhopal</option>
+  <option value="saab">Indore</option>
+  <option value="opel">Chennai</option>
+  <option value="audi">Jabalpur</option>
+</select>
+            </div>
+
+            <div class="col-md-4">
+                <select class="form-control">
+                    <option  selected="selected" disabled>Select board</option>
+  <option value="volvo">State</option>
+  <option value="saab">CBSE</option>
+  <option value="opel">ICSE</option>
+  <option value="audi">Others</option>
+</select>
+            </div>
+    </div>
+<br>
+    <button class="custom_search" type="submit" form="nameform" value="Submit">search</button>
+</div>
+</form>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+        <hr color="#378ba7" style="height: 2px">
+
+<div class="cus_tex"><h3 style="color:#1B8C88;">Most recent school</h3>
+        <p>Lorem Ipsum is simply dummy text</p><p>of the printing and typesetting industry.</p>
+
+    </div>
+
+
+    {%if school_list %}
+
+<table style="width:100%">
+    <tr>
+    <th>Schoolname</th>
+    <th>school address</th>
+    <th>From Class</th>
+            <th>to</th>
+    <th>Commuting Facilities</th>
+    <th>Available stream after 10th</th>
+    <th>Type of Board</th>
+    <th>Total Students</th>
+    <th>Safety Security and Meausures</th>
+    <th>CCTV</th>
+    <th>Students per Teachers</th>
+    <th>Mention</th>
+    <th>Misbehaving</th>
+    <th>Damege to Property</th>
+    <th>Fee Structure</th>
+    <th>Sports Played</th>
+    <th>Qualification Details of Teachers</th>
+    <th>Facilities_Provided</th>
+    <th>Major Achivements</th>
+    <th>Glorious Alumini Network</th>
+    <th>Our Teachings Ideology</th>
+    <th>Our future Plans Development</th>
+    <th>Do you support any Extra Activities</th>
+    <th>Principle Message</th>
+
+  </tr>
+
+            {% for sc in school_list %}
+  <tr>
+    <td>{{sc.school_name}}</td>
+    <td>{{sc.school_addesss}}</td>
+      <td>{{sc.From_Class}}</td>
+              <td>{{sc.to}}</td>
+<td>{{sc.Commuting_Facilities}}</td>
+<td>{{sc.Available_stream_after_10th}}</td>
+<td>{{sc.Type_of_Board}}</td>
+<td>{{sc.Total_Students}}</td>
+<td>{{sc.Safety_Security_and_Meausures}}</td>
+<td>{{sc.CCTV}}</td>
+<td>{{sc.Students_per_Teachers}}</td>
+<td>{{sc.Mention}}</td>
+<td>{{sc.Misbehaving}}</td>
+<td>{{sc.Damege_to_Property}}</td>
+<td>{{sc.Fee_Structure}}</td>
+<td>{{sc.Sports_Played}}</td>
+<td>{{sc.Qualification_Details_of_Teachers}}</td>
+<td>{{sc.Facilities_Provided}}</td>
+<td>{{sc.Major_Achivements}}</td>
+<td>{{sc.Glorious_Alumini_Network}}</td>
+<td>{{sc.Our_Teachings_Ideology}}</td>
+<td>{{sc.Our_future_Plans_Development}}</td>
+<td>{{sc.Do_you_support_any_Extra_Activities}}</td>
+<td>{{sc.Principle_Message}}</td>
+
+<!--      <td>{{sc.school_addesss}}</td>-->
+<!--      <td>{{sc.school_addesss}}</td>-->
+
+  </tr>
+<!--  <tr>-->
+<!--    <td>Eve</td>-->
+<!--    <td>Jackson</td>-->
+<!--    <td>94</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>John</td>-->
+<!--    <td>Doe</td>-->
+<!--    <td>80</td>-->
+<!--  </tr>-->
+    {% endfor %}
+</table>
+
+{%else%}
+    <p>no data found</p>
+
+    {%endif%}
+
+
+    <hr color="#378ba7" style="height: 2px">
+
+<div class="cus_tex"><h3 style="color:#1B8C88;">Most recent Coachings</h3>
+        <p>Lorem Ipsum is simply dummy text</p><p>of the printing and typesetting industry.</p>
+</div>
+{%if coaching_list %}
+
+<table style="width:100%">
+    <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email id</th>
+    <th>Timings</th>
+    <th>Subjects</th>
+    <th>Class being Tought</th>
+    <th>Years of Experience</th>
+    <th>Educationnal Qualification</th>
+    <th>Fees</th>
+    <th>Frequency of Class</th>
+    <th>About</th>
+  </tr>
+
+{% for sc in coaching_list %}
+  <tr>
+    <td>{{sc.Name}}</td>
+    <td>{{sc.addesss}}</td>
+<td>{{sc.Phone_number}}</td>
+<td>{{sc.Email_id}}</td>
+<td>{{sc.Timings}}</td>
+<td>{{sc.Subjects}}</td>
+<td>{{sc.Class_being_Tought}}</td>
+<td>{{sc.Years_of_Experience}}</td>
+<td>{{sc.Educationnal_Qualification}}</td>
+<td>{{sc.Fees}}</td>
+<td>{{sc.Frequency_of_Class}}</td>
+<td>{{sc.About}}</td>
+
+<!--      <td>{{sc.school_addesss}}</td>-->
+<!--      <td>{{sc.school_addesss}}</td>-->
+
+  </tr>
+<!--  <tr>-->
+<!--    <td>Eve</td>-->
+<!--    <td>Jackson</td>-->
+<!--    <td>94</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>John</td>-->
+<!--    <td>Doe</td>-->
+<!--    <td>80</td>-->
+<!--  </tr>-->
+    {% endfor %}
+</table>
+
+{%else%}
+    <p>no data found</p>
+
+    {%endif%}
+    <hr color="#378ba7" style="height: 2px">
+   <div class="cus_tex"> <h3 style="color:#1B8C88;">Most recent Tutors</h3>
+        <p>Lorem Ipsum is simply dummy text</p><p>of the printing and typesetting industry.</p>
+   </div>
+
+    {%if tutor_list %}
+
+<table style="width:100%">
+    <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email id</th>
+    <th>Timings</th>
+    <th>Subjects</th>
+    <th>Class being Tought</th>
+    <th>Years of Experience</th>
+    <th>Educationnal Qualification</th>
+    <th>Fees</th>
+    <th>Frequency of Class</th>
+    <th>About</th>
+  </tr>
+
+{% for sc in tutor_list %}
+  <tr>
+    <td>{{sc.Name}}</td>
+    <td>{{sc.addesss}}</td>
+<td>{{sc.Phone_number}}</td>
+<td>{{sc.Email_id}}</td>
+<td>{{sc.Timings}}</td>
+<td>{{sc.Subjects}}</td>
+<td>{{sc.Class_being_Tought}}</td>
+<td>{{sc.Years_of_Experience}}</td>
+<td>{{sc.Educationnal_Qualification}}</td>
+<td>{{sc.Fees}}</td>
+<td>{{sc.Frequency_of_Class}}</td>
+<td>{{sc.About}}</td>
+
+<!--      <td>{{sc.school_addesss}}</td>-->
+<!--      <td>{{sc.school_addesss}}</td>-->
+
+  </tr>
+<!--  <tr>-->
+<!--    <td>Eve</td>-->
+<!--    <td>Jackson</td>-->
+<!--    <td>94</td>-->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>John</td>-->
+<!--    <td>Doe</td>-->
+<!--    <td>80</td>-->
+<!--  </tr>-->
+    {% endfor %}
+</table>
+
+{%else%}
+    <p>no data found</p>
+
+    {%endif%}
+
+    <hr color="#378ba7" style="height: 2px">
+    <div class="cus_tex">
+<h3 style="color:#1B8C88;">Our Products</h3>
+        <p>Lorem Ipsum is simply dummy text</p><p>of the printing and typesetting industry.</p>
+    </div>
+<div class="form-group row">
+            <div class="col-md-3">
+                <p class="school"><i class="fa fa-book" style="font-size:100px;" aria-hidden="true"></i><br>
+                    Name or title<br>
+                    Description of the product<br>
+                    Rs 5000/-
+</p>
+            </div>
+    <div class="col-md-3">
+        <p class="school"><i class="fa fa-book" style="font-size:100px;" aria-hidden="true"></i><br>Name or title<br>
+            Description of the product<br>
+            Rs 5000/-
+</p>
+            </div>
+    <div class="col-md-3">
+        <p class="school"><i class="fa fa-book" style="font-size:100px;" aria-hidden="true"></i><br>Name or title<br>
+            Description of the product<br>
+            Rs 5000/-
+</p>
+            </div>
+    <div class="col-md-3">
+        <p class="school"><i class="fa fa-book" style="font-size:100px;" aria-hidden="true"></i><br>Name or title<br>
+            Description of the product<br>
+            Rs 5000/-
+</p>
+            </div>
+
+</div><br>
+        <button class="custom_search" type="submit" form="nameform" value="Submit">Checkout All Products</button>
+
+
+    <hr color="#378ba7" style="height: 2px">
+
+<!--    <div class="form-group row">-->
+<!--            <div class="col-md-4">-->
+
+
+<!--      <a href="{% url 'login' %}"><i class="fa fa-home" style="font-size:100px;" aria-hidden="true"></i><i class="fas fa-cat"></i>School</a>-->
+<!--                    </div>-->
+
+<!--                <div class="col-md-4">-->
+<!--                <a href="{% url 'login' %}"><i class="fa fa-book" style="font-size:100px;" aria-hidden="true"></i><i class="fas fa-cat"></i>Coaching</a>-->
+<!--    </div>-->
+<!--                <div class="col-md-4">-->
+<!--        <a href="{% url 'login' %}"><i class="fa fa-address-book" style="font-size:100px;" aria-hidden="true"></i><i class="fas fa-cat"></i>Tutor</a>-->
+<!--                </div>-->
+<!--</div>-->
+<div class="cus_part_4">
+<div class="form-group row">
+            <div class="col-md-4">
+                <p>
+<i class="fa fa-bookmark-o" style="font-size:100px;" aria-hidden="true"></i><br>
+                    <span style="color:yellow; ">Your Requriment your choice</span><br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                </p>
+
+
+                    </div>
+
+                <div class="col-md-4">
+                <p>
+<i class="fa fa-handshake-o" style="font-size:100px;" aria-hidden="true"></i><br>
+                    <span style="color:yellow; ">Reliability</span><br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                </p>
+
+
+                    </div>
+                <div class="col-md-4">
+                <p>
+<i class="fa fa-thumbs-up" style="font-size:100px;" aria-hidden="true"></i><br>
+                   <span style="color:yellow; ">Fast & Easy</span> <br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+                </p>
+
+
+                    </div>
+</div>
+</div>
+<hr color="#378ba7" style="height: 2px">
+        <div class="cus_tex">
+
+    <p style="font-size: 30px;color:#1B8C88;">Testimonials</p><br>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    <div class="form-group row">
+            <div class="col-md-6">
+                <p class="school"><br>
+                    Really Helpful <br>
+                    <br><br><br><br><br>
+                    surojit sahu
+
+
+</p>
+            </div>
+    <div class="col-md-6">
+        <p class="school"><br>save my time<br>
+                                <br><br><br><br><br>
+
+            pavan yadav
+</p>
+            </div>
+
+</div>
+
+
+
+<hr color="#378ba7" style="height: 2px">
+    <div class="cus_part_5">
+<div class="form-group row">
+            <div class="col-md-6">
+                <div class="cus_first">
+                    <p>Do you have any Questions?</p>
+
+                </div>
+            </div>
+    <div class="col-md-6">
+        <div class="cus_second">
+        <p><i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+<a href="mailto:hello@scholoease.com?Subject=Hello%20again" target="_top">hello@scholoease.com</a>
+</p><br>
+       <p> <i class="fa fa-phone" aria-hidden="true"></i>
+
+        <a href="tel:+919713309223">+91-9713309223</a>
+</p>
+</div>
+            </div>
+</div>
+
+
+</div>
+<hr color="#378ba7" style="height: 2px">
+<!--    {%if school_list %}-->
+<!--    <table>-->
+
+<!--        <thead>-->
+<!--        <th>School name</th>-->
+<!--        <th>School add</th>-->
+
+<!--        </thead>-->
+<!--        {% for sc in school_list %}-->
+
+<!--        <tr>-->
+<!--            <td>{{sc.school_name}}</td>-->
+<!--            <td>{{sc.school_addesss}}</td>-->
+
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--    </table>-->
+<!--{%else%}-->
+<!--    <p>no data found</p>-->
+
+<!--    {%endif%}-->
+
+<!-- -->
+
+
+</div>
+<style>
+table, th, td {
+  border: 2px solid black;
+}
+</style>
+{% endblock %}

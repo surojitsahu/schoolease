@@ -1,0 +1,77 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<script src="https://kit.fontawesome.com/a076d05399.js"></script>-->
+
+<html>
+ {% block head %}
+ <header>
+
+    <div class="topnav">
+  <a class="active" href="{% url 'school_list_view' %}">Home</a>
+  <a href="{% url 'aboutus' %}">About Us</a>
+  <a href="{% url 'contactus' %}">Contact Us</a>
+  <a href="{% url 'signup' %}">Signup</a>
+         <a href="{% url 'login' %}">Login</a>
+</div>
+    </header>
+<head>
+  <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+     <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" />
+
+
+</head>
+   {% endblock %}
+<body>
+
+{% block branding %}
+
+{% endblock %}
+    {% block content %}
+    {% endblock %}
+<footer>
+<div class="container">
+
+<div class="form-group row">
+    <div class="col-md-6">
+<!--<div style="color:blue;">-->
+<p>contact information</p>
+    <p>D-14 Tripti vihar ujjain-456010</p>
+
+    <p>+91-9713309223</p>
+
+    <p>hello@schoolease.com</p>
+
+    <p>School is a venture led by the student of IIT roork
+    School is a venture led by the student of IIT roork
+    School is a venture led by the student of IIT roork
+    School is a venture led by the student of IIT roork</p><br><br>
+
+        <span>© 2019 All rights reserved.</span>
+    </div>
+
+<div class="col-md-6">
+
+    <h4><a href="{% url 'school_list_view' %}" >Home</a></h4>
+    <h4><a href="{% url 'home' %}" >Terms and Conditions</a></h4>
+    <h4><a href="{% url 'home' %}" >Contact</a></h4>
+
+    <br><br>
+    <p>Get in touch with us</p>
+
+    <a href="#"><i class="fa fa-facebook" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-instagram" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-twitter" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+    <a href="#"><i class="fa fa-google-plus-square" style="font-size:24px;" aria-hidden="true"></i><i class="fas fa-cat"></i></a>
+
+
+</div>
+</div>
+</div>
+</footer>
+    {% block javascript %}
+   {% endblock %}
+
+</body>
+</html>
+

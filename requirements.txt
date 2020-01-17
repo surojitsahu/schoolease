@@ -1,0 +1,4 @@
+database==sqlite3
+django==2.2.7
+wheel==0.33.6
+superuser==username-admin/pass-admin
